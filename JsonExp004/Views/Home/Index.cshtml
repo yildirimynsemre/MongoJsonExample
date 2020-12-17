@@ -1,0 +1,22 @@
+﻿@model JsonExp004.Models.Company
+@{
+    ViewData["Title"] = "Home Page";
+}
+<head>
+
+
+</head>
+<body>
+    <h2>
+        Add And Update
+    </h2>
+    <div>
+        @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+        {
+            @Html.TextBoxFor(Model => Model.Name, new { @value = "FirstName" })
+            @Html.TextBoxFor(Model => Model.VKN, new { @value = "LastName" })
+            @Html.TextBoxFor(Model => Model.Address, new { @value = "Address" })
+            <button type="submit">Save</button>
+        }
+    </div>
+</body>

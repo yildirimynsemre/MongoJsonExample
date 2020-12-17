@@ -1,0 +1,33 @@
+﻿@model IEnumerable<JsonExp004.Models.Comp>
+@{
+    ViewData["Title"] = "Goster";
+}
+
+<h2>Goster</h2>
+
+<body>
+    <div>
+        <table border="1">
+            <thead>Name</thead>
+            <thead>VKN</thead>
+            <thead>Adress</thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td>
+                        @item.Name
+                    </td>
+                    <td>
+                        @item.VKN
+                    </td>
+                    <td>
+                        @item.Address
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+</body>
